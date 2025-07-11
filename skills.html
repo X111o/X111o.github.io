@@ -1,0 +1,136 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="Style.css">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel='stylesheet'>
+<title>Skills</title>
+</head>
+	<body style="background: #081b29">
+<header class="header">
+  <div id="menu-icons"><i class="bx bx-menu"></i></div>
+		<a href="Profile.html" class="logo">Xavier.</a>
+		
+		<nav class="navbar">
+			<a href="Profile.html">Home</a>
+			<a href="About Me.html">About Me</a>
+			<a href="Education.html">Education</a>
+			<a href="Skills.html" class="active">Skills</a>
+			<a href="Achievements.html">Achievements</a>
+			<a href="Contact.html">Contact</a>
+		</nav>
+</header>
+
+		
+   <section id="skills" class="skills">
+	   <h2>Skills</h2>
+		<div class="skill-grid">
+			
+			<div class="skill-card">
+				<i><img src="Coding Logo.png" alt="" width="348" height="348" class="circle-photo"/></i>
+				<h3>Programming Languages</h3>
+				<p>[Python, JavaScript, Visual Coding]</p>
+		  </div>
+			
+			<div class="skill-card">
+				<i><img src="Operating System.png" alt="" width="256" height="256" class="circle-photo"/></i>
+				<h3>Operating Systems</h3>
+				<p>[Windows, Linux]</p>
+			</div>
+			
+		  <div class="skill-card">
+				<i><img src="Azure logo.png" alt="" class="circle-photo"/></i>
+				<h3>Tools &amp; Technologies</h3>
+				<p>[Azure, Cisco Packet Tracer, VMWare, MobaXterm, Putty ]</p>
+			</div>
+			
+		  <div class="skill-card">
+				<i><img src="Network Logo.gif" alt="" width="342" height="260" class="circle-photo"/></i>
+				<h3>Networking</h3>
+				<p>[TCP/IP, VLAN, ACL, Router-on-a-Stick]</p>
+			</div>
+			
+		  <div class="skill-card">
+				<i><img src="Microsoft_Logo.png" alt="" width="512" height="512" class="circle-photo"/></i>
+				<h3>Microsoft Office</h3>
+				<p>[PowerPoint, Excel, Word]</p>
+			</div>
+			
+		  <div class="skill-card">
+				<i><img src="Soft Skills logo.png" alt="" class="circle-photo"/></i>
+				<h3>Soft Skills</h3>
+				<p>[Communication, Project Management, Management, Analytics, Teamwork, Problem-solving, Research]</p>
+			</div>
+		</div>
+	</section>	
+
+		
+<footer>
+		<div class="footer-container">
+			<div class="social-wrapper">
+			<div class="SocialIcons">
+				<a href="mailto:xaviergoh06@gmail.com" target="_blank"><img src="gmail-logo.png" alt="" width="80" height="60"/></a>
+				<a href="https://www.linkedin.com/in/xavier-goh-6a71602ab/" target="_blank" ><img src="Linkedin_circle logo.png" alt="" width="40" height="40"/></a>
+				<a href="tel:+65 98787442" target="_blank" ><img src="phone-call-logo.png" alt="" width="40" height="40"/></a>
+			</div>
+			</div>
+			<div class="FooterNav">
+				<ul>
+					<li><a href="Profile.html">Home</a></li>
+					<li><a href="About Me.html">About Me</a></li>
+					<li><a href="Education.html">Education</a></li>
+					<li><a href="Skills.html">Skills</a></li>
+					<li><a href="Achievements.html">Achievements</a></li>
+					<li><a href="Contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	<hr>
+	<div class="footerbottom">
+		<p>&copy; 2025 Xavier Goh. All rights reserved.</p>
+	</div>
+</footer>
+		
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+  	const menuIcon = document.querySelector('#menu-icons i');
+  	const navbar = document.querySelector('.navbar');
+
+  	menuIcon.onclick = () => {
+    	navbar.classList.toggle('active');
+    	menuIcon.classList.toggle('bx-menu');
+    	menuIcon.classList.toggle('bx-x');
+  };
+
+  	window.addEventListener('resize', () => {
+    	if (window.innerWidth > 768) {
+      	navbar.classList.remove('active');
+      	menuIcon.classList.remove('bx-x');
+      	menuIcon.classList.add('bx-menu');
+    }
+  });
+	const nav = document.querySelector('.navbar');
+
+function disableTransitionTemporarily() {
+  nav.classList.add('no-transition');
+
+  // Force reflow so styles apply immediately
+  nav.offsetHeight;
+
+  // Remove class after a short delay to re-enable transition
+  setTimeout(() => {
+    nav.classList.remove('no-transition');
+  }, 100);
+}
+
+window.addEventListener('load', disableTransitionTemporarily);
+window.addEventListener('resize', disableTransitionTemporarily);
+
+
+  	window.onscroll = () => {
+    	const header = document.querySelector('header');
+    	header.classList.toggle('sticky', window.scrollY > 0);
+  };
+});
+</script>
+</body>
+</html>

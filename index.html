@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Profile</title>
+<link rel="stylesheet" href="Style.css">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel='stylesheet'>
+</head>
+<body style="background-color: #081B29">
+<header class="header">
+  <div id="menu-icons"><i class="bx bx-menu"></i></div>
+		<a href="Profile.html" class="logo">Xavier.</a>
+		
+		<nav class="navbar">
+			<a href="Profile.html" class="active">Home</a>
+			<a href="About Me.html">About Me</a>
+			<a href="Education.html">Education</a>
+			<a href="Skills.html">Skills</a>
+			<a href="Achievements.html">Achievements</a>
+			<a href="Contact.html">Contact</a>
+		</nav>
+</header>
+	
+	<section class="home">
+	  <div class="home-content">
+			<!-- Infomation about myself and who i am -->
+		  <h1>Hi, I'm Xavier</h1>
+		  <h4>Cybersecurity Enthusiast</h4>
+			<p>Feel Free to explore about me and my website and thanks for visiting</p>
+		  <div class="btn-box">
+				<a href="About Me.html">About Me</a>
+				<a href="Skills.html">Skills</a>
+			</div>
+			
+			<!-- Contact Ones such as linkin , email or phone number -->
+			<div class="home-sci"> 
+				<a href="mailto:xaviergoh06@gmail.com" target="_blank"><img src="gmail-logo.png" alt="" width="80" height="60"/></a>
+				<a href="https://www.linkedin.com/in/xavier-goh-6a71602ab/" target="_blank" ><img src="Linkedin_circle logo.png" alt="" width="40" height="40"/></a>
+				<a href="tel:+65 98787442" target="_blank" ><img src="phone-call-logo.png" alt="" width="40" height="40"/></a>
+			</div>
+			
+		  <span class="home-imghover"></span>
+		</div>
+		<footer>
+			<!-- Contact Section -->
+			<p>&copy; 2025 Xavier Goh. All rights reserved.</p>
+		</footer>
+		
+	</section>
+	
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+  	const menuIcon = document.querySelector('#menu-icons i');
+  	const navbar = document.querySelector('.navbar');
+
+  	menuIcon.onclick = () => {
+    	navbar.classList.toggle('active');
+    	menuIcon.classList.toggle('bx-menu');
+    	menuIcon.classList.toggle('bx-x');
+  };
+
+  	window.addEventListener('resize', () => {
+    	if (window.innerWidth > 768) {
+      	navbar.classList.remove('active');
+      	menuIcon.classList.remove('bx-x');
+      	menuIcon.classList.add('bx-menu');
+    }
+  });
+	const nav = document.querySelector('.navbar');
+
+function disableTransitionTemporarily() {
+  nav.classList.add('no-transition');
+
+  // Force reflow so styles apply immediately
+  nav.offsetHeight;
+
+  // Remove class after a short delay to re-enable transition
+  setTimeout(() => {
+    nav.classList.remove('no-transition');
+  }, 100);
+}
+
+window.addEventListener('load', disableTransitionTemporarily);
+window.addEventListener('resize', disableTransitionTemporarily);
+
+
+  	window.onscroll = () => {
+    	const header = document.querySelector('header');
+    	header.classList.toggle('sticky', window.scrollY > 0);
+  };
+});
+</script>
+</body>
+</html>

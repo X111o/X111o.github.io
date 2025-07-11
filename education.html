@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="Style.css" />
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel='stylesheet'>
+<title>Projects</title>
+</head>
+<body class="Scrollable" style="padding-top: 120px;">
+<header class="header">
+  <div id="menu-icons"><i class="bx bx-menu"></i></div>
+		<a href="Profile.html" class="logo">Xavier.</a>
+		
+		<nav class="navbar">
+			<a href="Profile.html">Home</a>
+			<a href="About Me.html">About Me</a>
+			<a href="Education.html" class="active">Education</a>
+			<a href="Skills.html">Skills</a>
+			<a href="Achievements.html">Achievements</a>
+			<a href="Contact.html">Contact</a>
+		</nav>
+</header>
+
+	<div class="timeline-wrapper">
+		
+		<div class="timeline-row">
+		
+			<div class="timeline-col">
+			
+				<h2 class="heading">
+					<i class="bx bxs-graduation"></i> Education </h2>
+				
+				<div class="timeline-box">
+					
+					<div class="content-box">
+					
+						<div class="date">
+							<i class="bx bx-calendar"></i>
+							2010 - 2012
+						</div>
+						
+						<h3>PAP Community Foundation(Moulmein Education Centre)</h3>
+						
+						<p>Graduted at Moulmein Education Centre (Farrer Park Branch) and getting Certificate of Achievement for completing the Kindergarten Education</p>
+					</div>
+					
+					<div class="content-box">
+					
+						<div class="date">
+							<i class="bx bx-calendar"></i>
+							2012 - 2017
+						</div>
+						
+						<h3>Primary School</h3>
+						
+						<p>Graduted at Farrer Park Primary School and getting PSLE Certificate</p>
+					</div>
+				
+					
+					<div class="content-box">
+						
+						<div class="date">
+							<i class="bx bx-calendar"></i>
+							2018 - 2022
+						</div>
+						
+						<h3>Secondary School</h3>
+						
+						<p>Graduted at Bendemeer Secondary School and getting N-Level Certificate</p>
+					</div>
+					
+					
+					<div class="content-box">
+						
+						<div class="date">
+							<i class="bx bx-calendar"></i>
+							2023- 2025
+						</div>
+						
+						<h3>ITE (Institute of Technical Education)</h3>
+						
+						<p>Ongoing</p>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+			<div class="timeline-col">
+					<h2 class="heading">
+					<i class="bx bxs-briefcase-alt-2" ></i>
+					Experience
+					</h2>
+				<div class="timeline-box">
+				 
+					<div class="content-box">
+						
+						<div class="date">
+							<i class="bx bx-calendar"></i>
+							29/9/2024 - 11/5/2025
+						</div>
+						
+					<h3>Worked at EmiNET Lte Ptd (Internship)</h3>
+						
+					  <p>As an IT Engineer working on varius projects:
+						  <li>Mandai Rainforest Resort by Banyan Tree</li> 
+						  <li> voco Orchard Singapore by IHG</li> 
+						  <li>The St. Regis Singapore</li>
+						  <li>Singapore Rail Test Centre</li>
+						  <a></a>
+						  I gained numerious skills like:  <li>Deploying Access Points(AP)/GPONs(Gigabit Passive Optical Network) </li>
+						  <li>Mounting switches/firewalls </li>
+						 <li>Switch/firewall configurations using MobaxTerm</li>
+						<li>Monitering back-end networks </li>
+						 <li>Doing documentations for final handovers.</li>
+						<li>Maintaining control over deployment logistics</li>
+						<li>Basic network troubleshooting for both wired and wireless networks</li></p>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	
+		<!-- Contact Section -->
+<footer>
+		<div class="footer-container">
+			<div class="social-wrapper">
+			<div class="SocialIcons">
+				<a href="mailto:xaviergoh06@gmail.com" target="_blank"><img src="gmail-logo.png" alt="" width="80" height="60"/></a>
+				<a href="https://www.linkedin.com/in/xavier-goh-6a71602ab/" target="_blank" ><img src="Linkedin_circle logo.png" alt="" width="40" height="40"/></a>
+				<a href="tel:+65 98787442" target="_blank" ><img src="phone-call-logo.png" alt="" width="40" height="40"/></a>
+			</div>
+			</div>
+			<div class="FooterNav">
+				<ul>
+					<li><a href="Profile.html">Home</a></li>
+					<li><a href="About Me.html">About Me</a></li>
+					<li><a href="Education.html">Education</a></li>
+					<li><a href="Skills.html">Skills</a></li>
+					<li><a href="Achievements.html">Achievements</a></li>
+					<li><a href="Contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	<hr>
+	<div class="footerbottom">
+		<p>&copy; 2025 Xavier Goh. All rights reserved.</p>
+	</div>
+</footer>
+	
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+  	const menuIcon = document.querySelector('#menu-icons i');
+  	const navbar = document.querySelector('.navbar');
+
+  	menuIcon.onclick = () => {
+    	navbar.classList.toggle('active');
+    	menuIcon.classList.toggle('bx-menu');
+    	menuIcon.classList.toggle('bx-x');
+  };
+
+  	window.addEventListener('resize', () => {
+    	if (window.innerWidth > 768) {
+      	navbar.classList.remove('active');
+      	menuIcon.classList.remove('bx-x');
+      	menuIcon.classList.add('bx-menu');
+    }
+  });
+	const nav = document.querySelector('.navbar');
+
+function disableTransitionTemporarily() {
+  nav.classList.add('no-transition');
+
+  // Force reflow so styles apply immediately
+  nav.offsetHeight;
+
+  // Remove class after a short delay to re-enable transition
+  setTimeout(() => {
+    nav.classList.remove('no-transition');
+  }, 100);
+}
+
+window.addEventListener('load', disableTransitionTemporarily);
+window.addEventListener('resize', disableTransitionTemporarily);
+
+
+  	window.onscroll = () => {
+    	const header = document.querySelector('header');
+    	header.classList.toggle('sticky', window.scrollY > 0);
+  };
+});
+</script>
+</body>
+</html>
